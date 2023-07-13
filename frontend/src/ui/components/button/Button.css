@@ -1,0 +1,41 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px;
+  gap: 15px;
+cursor: pointer;
+  width: max-content;
+ text-align: center;
+  background: #5c5470;
+  border-radius: 25px;
+  border: none;
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  }
+  
+  .icon {
+    /* Add styles for the icon */
+  }
+  
+  .text {
+    /* Add styles for the text */
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 190.02%;
+    /* or 30px */
+ 
+  text-align: center;
+    color: white;
+  }
+  
+  .dropdown {
+    /* Add styles for the dropdown arrow */
+  }
+  

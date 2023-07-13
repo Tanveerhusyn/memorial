@@ -1,0 +1,20 @@
+.App {
+  /* text-align: center; */
+  position: relative;
+  overflow: hidden;
+  /* background-color:  red !important; */
+  min-height: 100vh !important;
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  outline: none;
+  border-color: #5c5470;
+  cursor: pointer;
+}

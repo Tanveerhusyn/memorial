@@ -1,0 +1,160 @@
+.share-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  height: 388px;
+  @media (max-width:768px) {
+   height: 500px;
+   margin-right: 10px;
+  }
+}
+
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+
+
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  @media (max-width:768px) {
+    font-size:4vw;
+  }
+}
+
+.share-mBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  
+  width: 157px;
+  height: 46px;
+  
+  background: #5C5470;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  @media (max-width:768px) {
+    margin-bottom:30px;
+    height:26px;
+  }
+  
+}
+
+
+
+.share-main-text{
+  width: 80%;
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 61px;
+  /* identical to box height, or 174% */
+  
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  
+  color: #5C5470;
+
+  @media (max-width:768px) {
+    font-size:25px;
+    line-height: 40px;
+  }
+}
+.share-text{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+text-align: start;
+margin-left: 20px;
+/* or 125% */
+
+letter-spacing: 0.2px;
+text-transform: uppercase;
+
+color: #5C5470;
+@media (max-width:768px) {
+  position: relative;
+  left: 15%;
+}
+
+}
+.share-second-para{
+ 
+
+font-family: 'Rastanty Cortez';
+font-style: normal;
+font-weight: 600;
+font-size: 70px;
+line-height: 73px;
+/* identical to box height, or 104% */
+margin:0;
+text-align: center;
+letter-spacing: 5.542px;
+text-transform: capitalize;
+
+color: #000000;
+@media (max-width:768px) {
+font-size:60px;
+}
+}
+
+.share-third-para{
+  font-family: 'Lora';
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 26px;
+/* or 120% */
+width: 60%;
+text-align: center;
+text-align: center;
+
+color: #000000;
+}
+
+.action-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width:768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.share-input{
+  display: flex;
+flex-direction: row;
+align-items: center;
+
+padding: 0px 0px 0px 20.0463px;
+gap: 553px;
+border: none;
+width: 292px;
+height: 46px;
+margin: 0 10px;
+background: #DEE2E6;
+border-radius: 25px;
+}

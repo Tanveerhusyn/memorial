@@ -1,0 +1,468 @@
+.lo-content {
+  width: 100%;
+  box-sizing: border-box;
+  height: fit-content;
+  background: #ffffff;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: flex-start; */
+  margin-bottom: 100px;
+  padding: 20px 40px;
+
+  margin-top: 30px;
+}
+.error-message {
+  color: red !important;
+  font-size: 12px !important;
+  margin-top: 5px;
+}
+
+.lo-single-line {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.lo-single-input {
+  width: 30%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+}
+.lo-single-input > p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #5c5470;
+}
+.gender {
+  display: flex;
+  margin-top: 10px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #5c5470;
+  justify-content: space-around;
+}
+.gender > .gender-label {
+  /* background-color: red; */
+}
+.lo-single-input > input {
+  /* width: 480px; */
+  height: 45px;
+  background: #dee2e6;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075);
+  border-radius: 20px;
+  border: none;
+  padding: 0 10px;
+  outline: none;
+  font-size: 1.5rem;
+  position: relative;
+}
+.drop {
+  height: 45px;
+  background: #dee2e6;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075);
+  border-radius: 20px;
+  border: none;
+  padding: 0 10px;
+  outline: none;
+  font-size: 1.2rem;
+  padding-right: 20px;
+  color: #655d79;
+}
+.single-input > p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 10px;
+  color: #5c5470;
+}
+.textara {
+}
+.area {
+  width: 49% !important;
+}
+textarea {
+  height: 200px !important;
+  background: #dee2e6;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075);
+  border-radius: 20px;
+  outline: none;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+.mail {
+  box-sizing: border-box;
+  padding: 80px;
+}
+.mail > h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #5c5470;
+}
+.mail > span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.14px;
+  color: #5c5470;
+  margin-top: -10px;
+}
+.contBtn {
+  width: 300px;
+  height: 40px;
+  background: #5c5470;
+  border-radius: 25px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 35px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 70%;
+  margin-bottom: 30px;
+  @media (max-width: 768px) {
+    width: 200px;
+  }
+  
+  @media (min-width: 481px) {
+    width: 200px;
+  }
+}
+.arro {
+  color: white;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.lo-title {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #5c5470;
+  text-align: left;
+}
+
+.gender-input {
+  display: flex;
+  flex-direction: row;
+}
+
+.gender-label {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.gender-label input[type="radio"] {
+  margin-right: 5px;
+}
+
+.gender-label input[type="radio"]:checked::before {
+  background-color: #5c5470;
+}
+
+.hidShow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hidShow > img {
+  cursor: pointer;
+}
+
+.http {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 30px;
+}
+.http > input {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.drop {
+  width: 100%;
+  padding-right: 20px; /* Adjust the padding as needed */
+  /* Add any other desired styles for the dropdown */
+}
+
+.drop::-ms-expand {
+  display: none; /* Remove the default arrow icon for Internet Explorer */
+}
+
+.drop:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 5px; /* Adjust the position as needed */
+  transform: translateY(-50%);
+  pointer-events: none; /* Ensure the icon does not intercept clicks */
+  /* Example styles for the dropdown icon */
+}
+
+select {
+  border-right: 15px solid #dee2e6 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .lo-content {
+    /* width: 100%; */
+    box-sizing: border-box;
+    height: fit-content;
+    background: #ffffff;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+    margin-bottom: 100px;
+    padding: 20px 20px;
+    margin-top: 30px;
+  }
+
+  .lo-single-line {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .lo-single-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .lo-single-input > p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #5c5470;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .gender {
+    display: flex;
+    margin-top: 10px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: #5c5470;
+    justify-content: space-around;
+  }
+  .gender > .gender-label {
+    /* background-color: red; */
+  }
+  .lo-single-input > input {
+    /* width: 480px; */
+    height: 45px;
+    background: #dee2e6;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075);
+    border-radius: 20px;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .drop {
+    height: 45px;
+    background: #dee2e6;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075);
+    border-radius: 20px;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+    font-size: 1.2rem;
+    padding-right: 20px;
+    color: #655d79;
+  }
+  .single-input > p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 10px;
+    color: #5c5470;
+  }
+  .textara {
+  }
+  .area {
+    width: 49% !important;
+  }
+  textarea {
+    height: 200px !important;
+    background: #dee2e6;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075);
+    border-radius: 20px;
+    outline: none;
+    padding: 20px;
+    font-size: 1.2rem;
+  }
+
+  .mail {
+    box-sizing: border-box;
+    padding: 80px;
+  }
+  .mail > h3 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #5c5470;
+  }
+  .mail > span {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.14px;
+    color: #5c5470;
+    margin-top: -10px;
+  }
+  .contBtn {
+    /* width: 300px; */
+    height: 40px;
+    background: #5c5470;
+    border-radius: 25px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 35px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 70%; */
+    margin-bottom: 30px;
+  }
+  .arro {
+    color: white;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+
+  .lo-title {
+    font-family: "Lora";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #5c5470;
+    text-align: left;
+    margin: 8px;
+  }
+
+  .gender-input {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .gender-label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  .gender-label input[type="radio"] {
+    margin-right: 5px;
+  }
+
+  .gender-label input[type="radio"]:checked::before {
+    background-color: #5c5470;
+  }
+
+  .hidShow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hidShow > img {
+    cursor: pointer;
+  }
+
+  .http {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red !important; */
+    margin: 5px;
+    width: 95%;
+
+    /* margin-left: 30px; */
+  }
+  .http > input {
+    width: 98%;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+  }
+}
+@media  (max-width: 400px) {
+  textarea{
+    width: 70vw;
+  }
+  .cusend{
+    width: 70vw;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  textarea{
+    width: 80vw;
+  }
+  .mail > h3{
+    margin-left: 60px;
+  }
+  .mail > span{
+    margin-left: 20px;
+  }
+}

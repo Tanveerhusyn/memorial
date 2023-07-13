@@ -1,0 +1,352 @@
+.pf-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+}
+.pf-top {
+  background: #5c5470;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+  width: 100%;
+  height: 380px;
+  box-sizing: border-box;
+}
+.pf-top > h2 {
+  font-family: Lora;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: center;
+  margin-bottom: 20px !important;
+  z-index: 5;
+  color: white;
+  padding-top: 150px;
+}
+
+.pfbottom {
+  height: 500px !important;
+  position: relative;
+}
+.pf-pricing {
+  width: 70%;
+  position: absolute;
+  top: 25%;
+  bottom: 15%;
+  box-sizing: border-box;
+  height: 590px;
+  background: #ffffff;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+  padding: 20px;
+}
+.pricing-card {
+  background: #5c5470;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  color: #fff;
+  padding: 5px 0px;
+  width: 400px;
+  box-sizing: border-box;
+}
+.pricing-card > .life {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffffff;
+  margin: 20px 0px;
+  margin-bottom: 40px;
+}
+.pricing-card > h2 {
+  background-color: #5c5470 !important;
+  margin: 20px 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  margin-bottom: 30px;
+  line-height: 12px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+.pricing-card > .flexible {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 12px;
+  text-align: center;
+  color: #ffffff;
+}
+.pricing-card > .divider {
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.line {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 9px;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+  text-align: start;
+  margin-left: 24%;
+}
+.line > img {
+  margin-right: 10px;
+}
+.get-started {
+  background: #5c5470;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  outline: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  border: 3px solid #ffffff;
+  border-radius: 25px;
+
+  color: #ffffff;
+  margin: 20px 2px;
+  padding: 7px 10px;
+  cursor: pointer;
+  height: 45px;
+  width: 200px;
+  margin-left: 25%;
+}
+
+.pricing-text {
+  width: 50%;
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 12px;
+  text-align: center;
+
+  color: #5c5470;
+}
+.pricing-text > .pfont {
+  font-family: "Rastanty Cortez";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: 5.542px;
+  text-transform: capitalize;
+  color: #5c5470;
+}
+.pricing-text > img {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .pf-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    /* height: fit-content !important; */
+    /* background-color: red !important; */
+  }
+  .pf-top {
+    background: #5c5470;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+    width: 100%;
+    height: 380px;
+    box-sizing: border-box;
+  }
+  .pf-top > h2 {
+    font-family: Lora;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 55px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: center;
+    margin-bottom: 20px !important;
+    z-index: 5;
+    color: white;
+    padding-top: 150px;
+  }
+
+  .pfbottom {
+    height: 600px !important;
+    position: relative;
+    margin-bottom: 100px;
+  }
+  .pf-pricing {
+    width: 95%;
+    position: absolute;
+    top: 20%;
+    bottom: 12%;
+    box-sizing: border-box;
+    height: 590px;
+    background: #ffffff;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    padding: 20px;
+    padding-top: 30px;
+    @media (max-width: 768px) {
+     height: 1000px;
+     display: flex;
+     justify-content: flex-start;
+     
+    }
+  }
+  .pricing-card {
+    background: #5c5470;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    color: #fff;
+    padding: 5px 0px;
+    width: 350px !important;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-bottom: 20px !important;
+    /* background-color:  red !important; */
+  }
+  .pricing-card > .life {
+    font-family: "Lora";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 15px;
+    text-align: center;
+    color: #ffffff;
+    margin: 20px 0px;
+    margin-bottom: 40px;
+  }
+  .pricing-card > h2 {
+    background-color: #5c5470 !important;
+    margin: 20px 0px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    margin-bottom: 30px;
+    line-height: 12px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #ffffff;
+  }
+  .pricing-card > .flexible {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 12px;
+    text-align: center;
+    color: #ffffff;
+  }
+  .pricing-card > .divider {
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .line {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 9px;
+    letter-spacing: 0.4px;
+    color: #ffffff;
+    text-align: start;
+    margin-left: 24%;
+  }
+  .line > img {
+    margin-right: 10px;
+  }
+  .get-started {
+    background: #5c5470;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    outline: none;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    border: 3px solid #ffffff;
+    border-radius: 25px;
+
+    color: #ffffff;
+    margin: 20px 2px;
+    padding: 7px 10px;
+    cursor: pointer;
+    height: 45px;
+    width: 200px;
+    margin-left: 25%;
+  }
+
+  .pricing-text {
+    width: 50%;
+    font-family: "Lora";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 28px !important;
+    text-align: center;
+
+    color: #5c5470;
+  }
+  .pricing-text > .pfont {
+    font-family: "Rastanty Cortez";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 43px !important;
+    text-align: center;
+    letter-spacing: 5.542px;
+    text-transform: capitalize;
+    color: #5c5470;
+  }
+  .pricing-text > img {
+    margin-top: 20px;
+  }
+}

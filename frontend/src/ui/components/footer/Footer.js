@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="footer-left" style={{ marginTop: "30px" }}>
             <p>
               &copy; Copyright © 2023 <br />
-              Remeberedandmissed All rights reserved
+              Willalwaysloveu All rights reserved
             </p>
           </div>
           <div className="footer-center">

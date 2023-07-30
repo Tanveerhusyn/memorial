@@ -23,7 +23,7 @@ function Contactus() {
     // Create an object with the email details
     const emailData = {
       from:email,
-      to: 'rememberedandmissed@gmail.com', // Change this to your backend endpoint
+      to: 'willalwaysloveu@gmail.com', // Change this to your backend endpoint
       text: message,
       subject: selectedOption
     };
@@ -59,7 +59,7 @@ function Contactus() {
       <div className="cu-content">
         <p>
           Do you have any questions or ideas to improve this website? Please
-          email us at <br></br> <b>rememberedandmissed@gmail.com</b>
+          email us at <br></br> <b>willalwaysloveu@gmail.com</b>
         </p>
 
         <form onSubmit={handleSubmit}>

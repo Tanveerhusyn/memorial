@@ -356,7 +356,7 @@ const Profile = () => {
   }, [memorial, user]);
 
   const sendEmail = (event, memo) => {
-    const from = "rememberedandmissed@gmail.com";
+    const from = "willalwaysloveu@gmail.com";
     // Create an object with the email details
     const { firstName, _id, owner } = memo;
     const emailData =
@@ -364,20 +364,20 @@ const Profile = () => {
         ? {
             from: from,
             to: owner, // Change this to your backend endpoint
-            text: `Today is ${firstName}'s Birthday. Wish hime here <a>https://rememberedandmissed.com/profile/${_id}`,
+            text: `Today is ${firstName}'s Birthday. Wish hime here <a>https://willalwaysloveu.com/profile/${_id}`,
             subject: `${firstName}'s Birthday`,
           }
         : event == "passed"
         ? {
             from: from,
             to: owner, // Change this to your backend endpoint
-            text: `Today is ${firstName}'s death anniversary. Leave a tribute here <a>https://rememberedandmissed.com/profile/${id}`,
+            text: `Today is ${firstName}'s death anniversary. Leave a tribute here <a>https://willalwaysloveu.com/profile/${id}`,
             subject: `${firstName}'s Death anniversary`,
           }
         : {
             from: from,
             to: owner, // Change this to your backend endpoint
-            text: `New Post created on the ${firstName}'s memorial  <a>https://rememberedandmissed.com/profile/${id}`,
+            text: `New Post created on the ${firstName}'s memorial  <a>https://willalwaysloveu.com/profile/${id}`,
             subject: `New post on ${firstName}'s Memorial`,
           };
 
@@ -2450,14 +2450,14 @@ const Profile = () => {
                       This website is administered by:
                     </p>
                     <p style={paragraphStyle} className="views-card-secondary">
-                      rememberedandmissed<br></br>@gmail.com
+                      willalwaysloveu<br></br>@gmail.com
                     </p>
                     {/* <p  style={paragraphStyle} className="views-card-secondary">Becky Bruns </p> */}
                   </div>
                   <Button
                     style={{ width: "fit-content", padding: "20px" }}
                     text="Contact to Author"
-                    onClick={()=>handleCopyClick("rememberedandmissed@gmail.com")}
+                    onClick={()=>handleCopyClick("willalwaysloveu@gmail.com")}
                     bgColor={selectedTheme?.textColor || "#5c5470"}
                   />
                 </div>

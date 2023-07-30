@@ -14,7 +14,7 @@ function Cancel() {
             Payment Failed
           </p>
           <p className="btm">
-            At RememberedandMissed, we provide a shared, easily-accessible
+            At willalwaysloveu, we provide a shared, easily-accessible
             virtual space where family members and friends can pay homage to a
             special life while helping each other heal by sharing their
             feelings, warm memories, and words of support.

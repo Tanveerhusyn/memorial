@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
 import logoSvg from "../../../assets/logo.svg";
+import logopng from "../../../assets/NewLogo2.png"
 import { Link } from "react-router-dom";
 import menuIcon from "../../../assets/menu.svg";
 import closeIcon from "../../../assets/close.png";
@@ -68,7 +69,7 @@ const Header = ({ loggedIn }) => {
     <header className="header-container">
       <div >
         <Link to="/">
-          <img src={logoSvg} alt="Logo" className="header-logo" />
+          <img src={logopng} style={{maxWidth:'300px'}} alt="Logo"  className="header-logo" />
         </Link>
       </div>
       <div className="menu-toggle" onClick={handleMenuToggle}>

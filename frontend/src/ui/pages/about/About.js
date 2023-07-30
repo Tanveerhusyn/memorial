@@ -13,7 +13,7 @@ function About() {
             Losing a loved one is incredibly painful, and very personal.
           </p>
           <p className="btm">
-            At RememberedandMissed, we provide a shared, easily-accessible
+            At willalwaysloveu, we provide a shared, easily-accessible
             virtual space where family members and friends can pay homage to a
             special life while helping each other heal by sharing their
             feelings, warm memories, and words of support.
@@ -51,14 +51,14 @@ function About() {
         </p>
         <p>
           This regret served as a catalyst for the creation of
-          RememberedAndMissed.com. I wanted to ensure that others wouldn't have
+          willalwaysloveu.com. I wanted to ensure that others wouldn't have
           to experience the same regret and sense of unfulfilled tribute that I
           did. I realized that there are countless individuals who, for various
           reasons, are unable to deliver eulogies or share their heartfelt
           sentiments during memorial services.
         </p>
         <p>
-          www.RememberedAndMissed.com serves as a virtual space where
+          www.willalwaysloveu.com serves as a virtual space where
           individuals can contribute their thoughts, memories, stories, and even
           eulogies, paying homage to the remarkable lives that touched their
           hearts. Through the power of shared experiences, this memorial website

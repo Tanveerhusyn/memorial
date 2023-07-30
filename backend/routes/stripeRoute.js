@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const stripe = require('stripe')('sk_test_51N4T41Bc97enoUfcKY4pZPGB4emOleCn4y43cGmg4vQkGQStCNE2IVTsStV3J50aZM1nuzs2QqKMRlGjGmZjM7XU00sRe08M2P');
+const stripe = require('stripe')('sk_test_51NSitcLZaqlFZMo5fBd2mzlIWKVE76NY95G8rqnVFG4tv4wpTxn8y0YQNy5voqtf8T75gDHDsYDRp6GfOUeoA9IT00lFRNqTbt');
 
 
 router.post('/create-checkout-session', async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       line_items: [
           {
-            price: 'price_1NMhURBc97enoUfc0zclF4go',
+            price: 'price_1NZhA4LZaqlFZMo5xgm73XYL',
             quantity: 1,
           },
         ],

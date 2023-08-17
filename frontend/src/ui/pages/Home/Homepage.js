@@ -12,7 +12,6 @@ function Homepage() {
   return (
     <>
       <Hero />
-      <Services />
       <FindMemorial />
       <Features />
       <Testimonials />

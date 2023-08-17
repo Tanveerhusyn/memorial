@@ -21,6 +21,8 @@ import Cancel from "./ui/pages/paymentstatus/Cancel";
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
+import Privacy from "./ui/pages/policy/Privacy";
+import Terms from "./ui/pages/terms/Terms";
 function App() {
   const [loggedIn, setLoggedIn] = useState(true);
   const { user } = useUserContext();
@@ -42,6 +44,8 @@ function App() {
             element={<Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />}
           />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/privacy" element={<Privacy/>} />
+          <Route path="/terms" element={<Terms/>} />
           <Route path="/theme" element={<ThemeSelection />} />
           <Route path="/profile/:id" element={<Profile />} />
           <Route path="/mymemo" element={<Mymemorial />} />

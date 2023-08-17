@@ -22,10 +22,10 @@ const Footer = () => {
                 <a href="/creatememorial">Memorial websites</a>
               </li>
               <li>
-                <a href="#">Terms of use</a>
+                <a href="/terms">Terms of use</a>
               </li>
               <li>
-                <a href="#">Privacy policy</a>
+                <a href="/privacy">Privacy policy</a>
               </li>
               <li>
                 <a href="/contactus">Contact us</a>
@@ -53,7 +53,7 @@ const Footer = () => {
                 </a>
               </li> */}
               <li>
-                <a href="#">
+                <a href="https://www.facebook.com" target="_blank" >
                   <svg
                     width="21"
                     height="21"

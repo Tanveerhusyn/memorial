@@ -28,6 +28,7 @@ import { Avatar } from "@mui/material";
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
 const Profile = () => {
   const parse = require("html-react-parser");
@@ -89,7 +90,7 @@ const Profile = () => {
           emailSent: false,
         };
 
-    fetch(`http://localhost:5000/api/memorials/notifications/update/${id}`, {
+    fetch(`${backendUrl}/api/memorials/notifications/update/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -153,7 +154,7 @@ const Profile = () => {
     setMainLoader(true);
 
     try {
-      const response = await fetch(`http://localhost:5000/api/memorials/${id}`);
+      const response = await fetch(`${backendUrl}/api/memorials/${id}`);
       if (response.ok) {
         const data = await response.json();
         console.log("Result", data.memorial);
@@ -197,7 +198,7 @@ const Profile = () => {
   const updateVisitor = async () => {
     try {
       // Make a request to the backend endpoint based on the subMenu value
-      let endpoint = `http://localhost:5000/api/memorials/visitors/${id}`;
+      let endpoint = `${backendUrl}/api/memorials/visitors/${id}`;
 
       const formData = new FormData();
       formData.append(
@@ -243,7 +244,7 @@ const Profile = () => {
 
     try {
       // Make a request to the backend endpoint based on the subMenu value
-      let endpoint = `http://localhost:5000/api/memorials/${id}`;
+      let endpoint = `${backendUrl}/api/memorials/${id}`;
 
       const response = await axios.put(endpoint, memorial, {
         headers: { "Content-Type": "application/json" },
@@ -270,7 +271,7 @@ const Profile = () => {
 
     try {
       // Make a request to the backend endpoint based on the subMenu value
-      let endpoint = `http://localhost:5000/api/memorials/${id}`;
+      let endpoint = `${backendUrl}/api/memorials/${id}`;
 
       const response = await axios.put(endpoint, data, {
         headers: { "Content-Type": "application/json" },
@@ -316,7 +317,7 @@ const Profile = () => {
     if (user) {
       // Fetch the memorials owned by the user
       fetch(
-        `http://localhost:5000/api/memorials/user/${user.meta._id}/memorials`
+        `${backendUrl}/api/memorials/user/${user.meta._id}/memorials`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -356,7 +357,7 @@ const Profile = () => {
   }, [memorial, user]);
 
   const sendEmail = (event, memo) => {
-    const from = "willalwaysloveu@gmail.com";
+    const from = "WillAlwaysLoveUTech@gmail.com";
     // Create an object with the email details
     const { firstName, _id, owner } = memo;
     const emailData =
@@ -382,7 +383,7 @@ const Profile = () => {
           };
 
     // Make an HTTP POST request to your backend endpoint
-    fetch(`http://localhost:5000/api/memorials/${id}/sendEmail`, {
+    fetch(`${backendUrl}/api/memorials/${id}/sendEmail`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -406,7 +407,7 @@ const Profile = () => {
   };
 
   const updateMemorialEmailSent = (eid, emailSent) => {
-    fetch(`http://localhost:5000/api/memorials/${eid}`, {
+    fetch(`${backendUrl}/api/memorials/${eid}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -437,7 +438,7 @@ const Profile = () => {
     try {
       setIsEditLoading(true);
       const response = await fetch(
-        `http://localhost:5000/api/memorials/${id}`,
+        `${backendUrl}/api/memorials/${id}`,
         {
           method: "PUT",
           headers: {
@@ -475,7 +476,7 @@ const Profile = () => {
     try {
       // Make a request to the backend endpoint to upload the display picture
       const response = await fetch(
-        `http://localhost:5000/api/memorials/${id}/stories`,
+        `${backendUrl}/api/memorials/${id}/stories`,
         {
           method: "PUT",
           body: formData,
@@ -523,7 +524,7 @@ const Profile = () => {
     try {
       // Make a request to the backend endpoint to upload the display picture
       const response = await fetch(
-        `http://localhost:5000/api/memorials/${id}/life`,
+        `${backendUrl}/api/memorials/${id}/life`,
         {
           method: "PUT",
           body: formData,
@@ -570,11 +571,11 @@ const Profile = () => {
       // Make a request to the backend endpoint based on the subMenu value
       let endpoint = "";
       if (subMenu === "photo") {
-        endpoint = `http://localhost:5000/api/memorials/${id}/photos`;
+        endpoint = `${backendUrl}/api/memorials/${id}/photos`;
       } else if (subMenu === "video") {
-        endpoint = `http://localhost:5000/api/memorials/${id}/videos`;
+        endpoint = `${backendUrl}/api/memorials/${id}/videos`;
       } else if (subMenu === "audio") {
-        endpoint = `http://localhost:5000/api/memorials/${id}/audios`;
+        endpoint = `${backendUrl}/api/memorials/${id}/audios`;
       }
 
       const response = await axios.post(endpoint, formData, {
@@ -617,7 +618,7 @@ const Profile = () => {
     };
     try {
       const response = await fetch(
-        `http://localhost:5000/api/memorials/${id}/tributes`,
+        `${backendUrl}/api/memorials/${id}/tributes`,
         {
           method: "POST",
           headers: {
@@ -885,7 +886,7 @@ const Profile = () => {
     try {
       // Make a request to the backend endpoint to upload the display picture
       const response = await fetch(
-        `http://localhost:5000/api/memorials/${id}/display-picture`,
+        `${backendUrl}/api/memorials/${id}/display-picture`,
         {
           method: "POST",
           body: formData,
@@ -975,7 +976,7 @@ const Profile = () => {
 
     try {
       // Make a request to the backend endpoint based on the subMenu value
-      let endpoint = `http://localhost:5000/api/memorials/${id}`;
+      let endpoint = `${backendUrl}/api/memorials/${id}`;
 
       const response = await axios.put(endpoint, formData, {
         headers: { "Content-Type": "multipart/form-data" },
@@ -992,7 +993,7 @@ const Profile = () => {
     }
   };
 
-  console.log("ISADM", isAdmin());
+  
   const galleryMenu = selectedTheme && {
     photo: (
       <>
@@ -1239,7 +1240,7 @@ const Profile = () => {
                       <Button
                         bgColor={selectedTheme?.textColor || "#5c5470"}
                         onClick={() => {
-                          const link = `http://localhost:3000/profile/${id}#about-${idx}`;
+                          const link = `http://willalwaysloveu.com/profile/${id}#about-${idx}`;
                           handleCopyClick(link);
                         }}
                         icon={
@@ -2359,7 +2360,7 @@ const Profile = () => {
                   <Button
                     onClick={() => {
                       // Copy any necessary text here
-                      const link = `https://localhost:5000/profile/${id}`;
+                      const link = `${backendUrl}/profile/${id}`;
                       handleCopyClick(link);
 
                       // Open Facebook.com in a new tab after a 2-second delay

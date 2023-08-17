@@ -16,6 +16,7 @@ function Contactus() {
   const handleOptionChange = (e) => {
     setSelectedOption(e.target.value);
   };
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,7 +30,7 @@ function Contactus() {
     };
 
     // Make an HTTP POST request to your backend endpoint
-    fetch('http://localhost:5000/api/contactus', {
+    fetch(`${backendUrl}/api/contactus`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -59,7 +60,7 @@ function Contactus() {
       <div className="cu-content">
         <p>
           Do you have any questions or ideas to improve this website? Please
-          email us at <br></br> <b>willalwaysloveu@gmail.com</b>
+          email us at <br></br> <b>WillAlwaysLoveUTech@gmail.com</b>
         </p>
 
         <form onSubmit={handleSubmit}>

@@ -15,6 +15,7 @@ function MyAccount() {
   const [sendPasswordResetEmail, loading, error] = useSendPasswordResetEmail(
     auth
   );
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
   const notifyError = () => toast.error(error, {
     position: "bottom-left",
@@ -40,7 +41,7 @@ function MyAccount() {
     
     try {
       // Make a request to the backend endpoint to upload the display picture
-      const response = await fetch(`http://localhost:5000/api/users/${meta._id}`, {
+      const response = await fetch(`${backendUrl}/api/users/${meta._id}`, {
         method: 'PUT',
         body: formData,
       });

@@ -17,6 +17,7 @@ import Button from "../../components/button/Button";
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
 const ThemeSelection = () => {
   const [open, setOpen] = React.useState(false);
@@ -59,7 +60,7 @@ const ThemeSelection = () => {
     };
     try {
       const response = await fetch(
-        `http://localhost:5000/api/users/${userId}`,
+        `${backendUrl}/api/users/${userId}`,
         {
           method: "POST",
           headers: {

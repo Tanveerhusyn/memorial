@@ -13,11 +13,12 @@ function Mymemorial() {
   const [memorials, setMemorials] = useState([]);
   const { meta } = user;
   const userId = meta._id;
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
   const handleDelete = async(id) =>{
     try {
        
-      const response = await fetch(`http://localhost:5000/api/memorials/${id}`, {
+      const response = await fetch(`${backendUrl}/api/memorials/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -44,7 +45,7 @@ function Mymemorial() {
      
 
     try {
-      const response = await fetch(`http://localhost:5000/api/memorials/user/${userId}/memorials`);
+      const response = await fetch(`${backendUrl}/api/memorials/user/${userId}/memorials`);
       
       if (response.ok) {
         const data = await response.json();

@@ -6,11 +6,13 @@ import { useUserContext } from "../../../context/MemorialContext";
 
 function Success() {
     const navigate = useNavigate()
+   const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
   const {user} = useUserContext();
   useEffect(() => {
     // Make the backend request to update the hasPaid field
     const updateHasPaid =  () => {
-      fetch(`http://localhost:5000/api/users/${user.meta._id}`, {
+      fetch(`${backendUrl}/api/users/${user.meta._id}`, {
   method: 'PUT',
   headers: {
     'Content-Type': 'application/json',

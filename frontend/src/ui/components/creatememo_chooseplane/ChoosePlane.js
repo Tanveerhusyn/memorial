@@ -5,7 +5,10 @@ import tick from "../../../assets/icons/tick.svg";
 import axios from 'axios'
 import { ThreeDots } from "react-loader-spinner";
 import { useUserContext } from "../../../context/MemorialContext";
+
 function ChoosePlane() {
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
   const [message,setMessage] = useState()
 const[loading,setLoading] = useState(false)
 const {delayedTrigger} = useUserContext();
@@ -28,7 +31,7 @@ const {delayedTrigger} = useUserContext();
     event.preventDefault();
     console.log('Hello')
     try {
-      const response = await axios.post('http://localhost:5000/api/create-checkout-session');
+      const response = await axios.post(`${backendUrl}/api/create-checkout-session`);
       // Handle the response from the backend
       console.log(response.data);
       if(response.data.url){

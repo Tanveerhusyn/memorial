@@ -25,9 +25,10 @@ export function MemorialContextProvider({ children }) {
   const [newThemes, setNewThemes] = useState(themes)
   const [selectedTheme, setSelectedTheme] = useState()
   const navigate = useNavigate();
-
   const [options, setOptions] = React.useState([]);
   const [currentMemorial, setCurrentMemorial] = React.useState()
+  
+   const backendUrl = process.env.REACT_APP_BACKEND_URL;
   const [showOption, setShowOption] = React.useState({
     title: "About your loved one",
     isCompleted: true,
@@ -101,7 +102,7 @@ export function MemorialContextProvider({ children }) {
             name: name,
             email: currentuser.user.email,
           };
-          fetch("http://localhost:5000/api/users", {
+          fetch(`${backendUrl}/api/users`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -183,7 +184,7 @@ export function MemorialContextProvider({ children }) {
             name: name,
             email: currentuser.user.email,
           };
-          fetch("http://localhost:5000/api/users", {
+          fetch(`${backendUrl}/api/users`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -221,7 +222,7 @@ export function MemorialContextProvider({ children }) {
 
   const fetchUser = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/users/${user.meta._id}`);
+      const response = await fetch(`${backendUrl}/api/users/${user.meta._id}`);
       if (response.ok) {
         const data = await response.json();
         setUser({ ...user, meta: { ...data.user } });
@@ -240,7 +241,7 @@ export function MemorialContextProvider({ children }) {
   useEffect(() => {
     const fetchThemes = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/themes");
+        const response = await axios.get(`${backendUrl}/api/themes`);
         setThemes(response.data.themes);
       } catch (error) {
         console.error(error);
@@ -263,7 +264,7 @@ export function MemorialContextProvider({ children }) {
           name: currentuser?.displayName || "",
           email: currentuser.email,
         };
-        fetch("http://localhost:5000/api/users", {
+        fetch(`${backendUrl}/api/users`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -2,22 +2,31 @@ import React, { useState } from "react";
 import "./Testimonial.css";
 
 const testimonialsData = [
+
   {
-    author: "Veronica Schade",
-    text: "Thank you - love the Father’s Day themes! So happy to see more options! Will send any ideas I come up with! This website has been my healing. I come to my dads site and meet with him in my mind. Going through our memories together, whenever I want. I tell everyone about your great website! Ty!!",
+    author: "Stephanie F.",
+    text: "I was able to create a beautiful tribute to my late husband. Their attention to detail and helpful customer support made the experience even more meaningful."
   },
   {
-    author: "Cherry Fouts",
-    text: "I'm glad to have found your website and thank you for offering a free plan, I really appreciate it. It's nice to have an online memorial like this where people who can't come to the funeral in person can leave their tribute online. We really appreciate you for building this website. From my family and I, thank you! God bless you more.",
+    author: "Karen R.",
+    text: "When I lost my best friend, I was overwhelmed with grief and worried about the expenses of creating a memorial. WillAlwaysLoveU.com ease of use and the range of customization options made it easy to create a heartfelt tribute that truly captured his spirit."
   },
   {
-    author: "John Wick",
-    text: "Thank you - love the Father’s Day themes! So happy to see more options! Will send any ideas I come up with! This website has been my healing. I come to my dads site and meet with him in my mind. Going through our memories together, whenever I want. I tell everyone about your great website! Ty!!",
+    author: "The Chandler Family",
+    text: "We were concerned about the cost of creating a lasting memorial for our beloved grandmother. WillAlwaysLoveU.com allowed us to create a touching tribute that celebrated her life in a meaningful way. We appreciate their commitment to affordability without sacrificing quality."
   },
   {
-    author: "Daniel",
-    text: "Thank you - love the Father’s Day themes! So happy to see more options! Will send any ideas I come up with! This website has been my healing. I come to my dads site and meet with him in my mind. Going through our memories together, whenever I want. I tell everyone about your great website! Ty!!",
+    author: "Alisa C.",
+    text: "I was able to create a touching tribute to my dear sister. Thank you for providing such a valuable and accessible platform for memorializing our loved ones."
   },
+  {
+    author: "Darrin.",
+    text: "WillAlwaysLoveU.com allowed me to create a heartfelt tribute to my late father. The user-friendly interface and the option to add personal touches made the process smooth and emotionally fulfilling. I am forever grateful for this affordable and meaningful service. His memory can truly live on with the tributes and support from all his friends and family."
+  },
+  {
+    author: "Edward.",
+    text: "I am truly grateful for the compassionate service provided by WillAlwaysLoveU.com. They made the process of honoring my loved one's memory stress-free and allowed me to focus on healing. Thank you for offering such a meaningful service."
+  }
 ];
 
 const Testimonials = () => {

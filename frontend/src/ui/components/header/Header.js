@@ -69,7 +69,7 @@ const Header = ({ loggedIn }) => {
     <header className="header-container">
       <div >
         <Link to="/">
-          <img src={logopng} style={{maxWidth:'300px'}} alt="Logo"  className="header-logo" />
+          <img src={logopng} style={{maxWidth:'300px',minWidth:'200px'}} alt="Logo"  className="header-logo" />
         </Link>
       </div>
       <div className="menu-toggle" onClick={handleMenuToggle}>

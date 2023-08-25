@@ -4,13 +4,13 @@ import { getAuth } from "firebase/auth";
 
 
   const firebaseConfig = {
-    apiKey: "AIzaSyB328iGEmu911pywBjq-llpRgUORzQg2Zo",
-    authDomain: "memorials-624cd.firebaseapp.com",
-    projectId: "memorials-624cd",
-    storageBucket: "memorials-624cd.appspot.com",
-    messagingSenderId: "136609919133",
-    appId: "1:136609919133:web:19f52c427f7a360a562474",
-    measurementId: "G-LHRQPDVD1R"
+    apiKey: "AIzaSyAFRVzlX3QWgGBjEN01A9zOnXDRnkeNRrI",
+    authDomain: "willalwaysloveu-504a9.firebaseapp.com",
+    projectId: "willalwaysloveu-504a9",
+    storageBucket: "willalwaysloveu-504a9.appspot.com",
+    messagingSenderId: "439261961524",
+    appId: "1:439261961524:web:d1be54a3adbc78284fd961",
+    measurementId: "G-VLC0X81WQV"
   };
   
  

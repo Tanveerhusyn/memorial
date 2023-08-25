@@ -4,6 +4,7 @@ const userRoutes = require("./routes/userRoutes");
 const memorialRoutes = require("./routes/memorialRoutes");
 const themeRoutes = require("./routes/themeRoutes");
 const stripeRoutes = require("./routes/stripeRoute");
+require('dotenv').config();
 const cors = require("cors");
 const app = express();
 
@@ -11,12 +12,12 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 // Connect to MongoDB
-const mongoURL =
-  "mongodb+srv://hafeezullah2023:hafeezullah2023@cluster0.vddszir.mongodb.net/memorials?retryWrites=true&w=majority";
-const testDB =
-  "mongodb+srv://tan:abcdefg@cluster0.wrwhy.mongodb.net/memorialapp?retryWrites=true&w=majority";
+const mongoURL = process.env.MONGO_URL;
+
+console.log(mongoURL)
+ 
 mongoose
-  .connect(testDB, {
+  .connect(mongoURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

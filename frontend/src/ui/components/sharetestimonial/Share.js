@@ -7,8 +7,8 @@ function Share() {
 const {handleChange} = useUserContext();
   return (
     <div className="share-container" >
-    <h1 className='share-main-text'>Preserve and share memories of your</h1>
-    <p className='share-second-para'>loved ones</p>
+    <h1 className='share-main-text'>RESERVE AND CHERISH MEMORIES OF YOUR</h1>
+    <p className='share-second-para'>loved one</p>
     <div className='share-bottom-section'>
     <p className='share-text'>share memories of</p>
   <div className='action-section'>

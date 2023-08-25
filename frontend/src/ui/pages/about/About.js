@@ -1,13 +1,15 @@
 import React from "react";
 import "./about.css";
-import logo from "../../../assets/logo.svg";
+import logo from "../../../assets/NewLogo2.png";
+
+
 import { Link } from "react-router-dom";
 
 function About() {
   return (
     <div className="aboutpage">
       <div className="ab-top">
-        <img src={logo} />
+        {/* <img  style={{maxWidth:'300px',minWidth:'200px',maxHeight:'150px'}} src={logo} /> */}
         <div className="content1">
           <p className="tp">
             Losing a loved one is incredibly painful, and very personal.

@@ -2,11 +2,12 @@ import React,{useState,useEffect} from "react";
 import "./PlaneFeature.css";
 import arrow from "../../../assets/icons/arraw.svg";
 import tick from "../../../assets/icons/tick.svg";
+import { useNavigate } from "react-router-dom";
 import getStripe from "../../../utils/getStripe";
 import axios from 'axios'
 function PlaneFeature() {
   const [message,setMessage] = useState()
-
+ const navigate = useNavigate();
   useEffect(() => {
     // Check to see if this is a redirect back from Checkout
     const query = new URLSearchParams(window.location.search);
@@ -23,8 +24,7 @@ function PlaneFeature() {
   }, []);
 
   const handleSubmit = async (event) => {
-     console.log("hi")
- 
+navigate('/creatememorial') 
   };
 
   return (
@@ -72,8 +72,10 @@ function PlaneFeature() {
             <img src={tick} alt="Tick" /> <span>Custom Notifications</span>
           </p>
           <p>{message}</p>
+     
+          
+          <button className="get-started" onClick={()=>handleSubmit()}>Get Started</button>
            
-          <button className="get-started" onClick={(e)=>handleSubmit(e)}>Get Started</button>
 
      
         </div>

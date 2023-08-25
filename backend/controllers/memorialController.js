@@ -7,6 +7,7 @@ const cloudinary = require('cloudinary').v2;
 const fs = require('fs')
 const nodemailer = require('nodemailer')
 const HTML_TEMPLATE = require('./email-template');
+require('dotenv').config();
 // Create a new memorial
 exports.createMemorial = async (req, res) => {
   try {
@@ -66,8 +67,8 @@ exports.sendEmail = async (req, res) => {
       port: 587,
       secure: false,
       auth: {
-        user: "rememberedandmissed@gmail.com",
-        pass: "jdnseybpbspjuxbe",
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
   
@@ -163,9 +164,9 @@ exports.updateMemorial = async (req, res) => {
       // Generate a unique public ID for the uploaded audio file
       const publicId = `AudioUploads/${musicFile.originalname}`;
       cloudinary.config({
-        cloud_name: 'dnrpvfhgs',
-        api_key: '892624489525822',
-        api_secret: '3r23GSf0EefP4xC1DYz1tkWSmgE'
+        cloud_name: process.env.CLOUDINARY_NAME,
+        api_key: process.env.CLOUDINARY_API,
+        api_secret: process.env.CLOUDINARY_SECRET
       });
       // Upload the music file to Cloudinary with the public ID
       const result = await cloudinary.uploader.upload(musicFile.path, {
@@ -247,9 +248,9 @@ exports.uploadVideo = async (req, res) => {
       const videoPath = req.file.path;
 
       cloudinary.config({
-        cloud_name: 'dnrpvfhgs',
-        api_key: '892624489525822',
-        api_secret: '3r23GSf0EefP4xC1DYz1tkWSmgE'
+        cloud_name: process.env.CLOUDINARY_NAME,
+        api_key: process.env.CLOUDINARY_API,
+        api_secret: process.env.CLOUDINARY_SECRET
       });
   
       const result = await new Promise((resolve, reject) => {
@@ -311,9 +312,9 @@ exports.uploadPhoto = async (req, res) => {
       const photoPath = req.file.path;
 
       cloudinary.config({
-        cloud_name: 'dnrpvfhgs',
-        api_key: '892624489525822',
-        api_secret: '3r23GSf0EefP4xC1DYz1tkWSmgE'
+        cloud_name: process.env.CLOUDINARY_NAME,
+        api_key: process.env.CLOUDINARY_API,
+        api_secret: process.env.CLOUDINARY_SECRET
       });
   
       const result = await new Promise((resolve, reject) => {
@@ -370,9 +371,9 @@ exports.uploadAudio = async (req, res) => {
     const audioPath = req.file.path;
 
     cloudinary.config({
-      cloud_name: 'dnrpvfhgs',
-      api_key: '892624489525822',
-      api_secret: '3r23GSf0EefP4xC1DYz1tkWSmgE'
+      cloud_name: process.env.CLOUDINARY_NAME,
+      api_key: process.env.CLOUDINARY_API,
+      api_secret: process.env.CLOUDINARY_SECRET
     });
 
     const result = await new Promise((resolve, reject) => {

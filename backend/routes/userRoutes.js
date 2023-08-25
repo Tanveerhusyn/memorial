@@ -4,13 +4,14 @@ const userController = require('../controllers/userController');
 const multer = require('multer');
 const cloudinary = require('cloudinary').v2;
 const { CloudinaryStorage } = require('multer-storage-cloudinary');
+require('dotenv').config();
 
-
+// configure cloudinary
 cloudinary.config({
-    cloud_name: "dnrpvfhgs",
-    api_key: "892624489525822",
-    api_secret: "3r23GSf0EefP4xC1DYz1tkWSmgE"
-  });
+  cloud_name: process.env.CLOUDINARY_NAME,
+  api_key:process.env.CLOUDINARY_API,
+  api_secret: process.env.CLOUDINARY_SECRET
+});
 
   const photoStorage = new CloudinaryStorage({
     cloudinary: cloudinary,

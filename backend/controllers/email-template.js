@@ -4,7 +4,7 @@ const HTML_TEMPLATE = (text) => {
       <html>
         <head>
           <meta charset="utf-8">
-          <title>Remembered and Missed</title>
+          <title>WillAlwaysLoveU</title>
           <style>
             .container {
               width: 100%;

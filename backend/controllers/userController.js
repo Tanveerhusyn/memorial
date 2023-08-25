@@ -2,7 +2,7 @@ const User = require('../models/User');
 const Memorial = require('../models/Memorial')
 const nodemailer = require('nodemailer')
 const HTML_TEMPLATE = require('./email-template');
-
+require('dotenv').config();
 // Create a new user
 exports.createUser = async (req, res) => {
   try {
@@ -39,8 +39,8 @@ exports.sendEmail = async (req, res) => {
       port: 587,
       secure: false,
       auth: {
-        user: "rememberedandmissed@gmail.com",
-        pass: "jdnseybpbspjuxbe",
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
   

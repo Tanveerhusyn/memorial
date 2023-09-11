@@ -76,9 +76,9 @@ exports.sendEmail = async (req, res) => {
     const options = {
       from: `${from} <${from}>`, // sender address
       to: to, // receiver email
-      subject: subject, // Subject line
+      subject: `${subject} <${from}>`, // Subject line
       text: text,
-      html: HTML_TEMPLATE(text),
+      html: HTML_TEMPLATE(text,from),
   }
     // Send the email
     await transporter.sendMail(options);

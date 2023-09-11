@@ -77,6 +77,10 @@ router.put('/memorials/notifications/update/:memorialId', memorialController.upd
 router.put('/memorials/:memorialId/stories', photoUpload.single('attachment'), memorialController.addStory);
 router.put('/memorials/:memorialId/life', photoUpload.single('attachment'), memorialController.addLife);
 
+router.post('/memorials/tempupload',photoUpload.single('img'),(req,res)=>{
+   res.send("Successfully uploaded")
+})
+
 // Upload a video for a memorial
 router.post('/memorials/:memorialId/videos', videoUpload.single('video'), memorialController.uploadVideo);
 

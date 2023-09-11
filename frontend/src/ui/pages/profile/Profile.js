@@ -61,8 +61,11 @@ const Profile = () => {
   const [isTributeLoading, setIsTributeLoading] = useState(false);
   const [editData, setEditData] = useState({});
   const [storyTitle, setStoryTitle] = useState("");
+  const [storyTitle1, setStoryTitle1] = useState("");
   const [storyDesc, setStoryDesc] = useState("");
+  const [storyDesc1, setStoryDesc1] = useState("");
   const [selectedFile, setSelectedFile] = useState();
+  const [selectedFile2, setSelectedFile2] = useState();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mainError, setMainError] = useState(false);
   const audioRef = useRef(null);
@@ -515,9 +518,9 @@ const Profile = () => {
   const handleLifeSubmit = async (e) => {
     setLoading(true);
     const formData = new FormData();
-    formData.append("attachment", selectedFile);
-    formData.append("title", storyTitle);
-    formData.append("description", storyDesc);
+    formData.append("attachment", selectedFile2);
+    formData.append("title", storyTitle1);
+    formData.append("description", storyDesc1);
     formData.append("author", user.email);
     formData.append("date", Date.now());
 
@@ -552,7 +555,7 @@ const Profile = () => {
     const selectedFile = e.target.files[0];
     console.log("Selected", selectedFile);
 
-    setSelectedFile(selectedFile);
+    setSelectedFile2(selectedFile);
     // Handle the selected file here
   };
 
@@ -1732,8 +1735,8 @@ const Profile = () => {
               </p>
               <p className="section-text">Add a life story chapter</p>
               <input
-                value={storyTitle}
-                onChange={(e) => setStoryTitle(e.target.value)}
+                value={storyTitle1}
+                onChange={(e) => setStoryTitle1(e.target.value)}
                 placeholder="Title"
                 className="title-input"
               />
@@ -1741,8 +1744,8 @@ const Profile = () => {
                 style={{ border: "none", color: "black" }}
                 className="react-quill-2"
                 theme="snow"
-                value={storyDesc}
-                onChange={setStoryDesc}
+                value={storyDesc1}
+                onChange={setStoryDesc1}
               />
             </div>
           )}
@@ -2451,7 +2454,7 @@ const Profile = () => {
                       This website is administered by:
                     </p>
                     <p style={paragraphStyle} className="views-card-secondary">
-                      willalwaysloveu<br></br>@gmail.com
+                      willalwaysloveuTech@gmail.com
                     </p>
                     {/* <p  style={paragraphStyle} className="views-card-secondary">Becky Bruns </p> */}
                   </div>

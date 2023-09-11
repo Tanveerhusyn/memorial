@@ -1137,10 +1137,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border: none;
   outline: none;
   height: 50px;
-  color: #5c5470;
+  color: black;
   background: #f5f5f5;
   margin: 20px 0px;
   border-radius: 10px;
+  font-size: large;
+  font-weight: 500;
+  
 }
 
 .gallery {

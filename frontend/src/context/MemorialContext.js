@@ -61,26 +61,39 @@ export function MemorialContextProvider({ children }) {
     }));
   };
   const handleSelected = (itm) => {
-    const newArr = options.map((option) => {
-      if (option === itm) {
-        return {
-          ...option,
-          isActive: true,
-        };
-      } else {
-        return {
-          ...option,
-          isActive: false,
-        };
+    const currentIndex = options.findIndex((option) => option === itm);
+  
+    // Check if the current step is the first step or the previous step is completed
+    if (currentIndex === 0 || options[currentIndex - 1].isCompleted) {
+      // Create a new array with updated isActive values
+      const updatedOptions = options.map((option) => ({
+        ...option,
+        isActive: option === itm,
+      }));
+  
+      // Check if specific fields in formData are not empty
+      const {
+        firstName,
+        lastName,
+        relationship,
+        gender,
+        memorialDestination,
+      } = formData;
+  
+      if (firstName !== '' && lastName !== '' && relationship !== '' && gender !== '' && memorialDestination !== '') {
+        // Update the options array with updated isActive values
+        setOptions(updatedOptions);
+  
+        // Set the showOption to the selected item
+        setShowOption(itm);
       }
-    });
-    
-   if(formData.firstName!='' && formData.lastName!='' && formData.relationship!='' && formData.gender!='' && formData.memorialDestination!=''){
-    setOptions(newArr);
-    setShowOption({ ...itm, isActive: true });
-   }
- 
+    } else {
+      // Handle the case where the previous step is not completed
+      console.log("You can't proceed until the previous step is completed.");
+    }
   };
+  
+  
   const [isLoading, setIsLoading] = useState(false);
   const [loading, setLoading] = useState(false);
   const [loginLoading, setLoginLoading] = useState(false);

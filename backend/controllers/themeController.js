@@ -21,7 +21,7 @@ exports.getThemes = async (req, res) => {
   try {
     // Find all themes
     const themes = await Theme.find();
-
+    console.log(themes)
     res.status(200).json({ themes });
   } catch (error) {
     console.error(error);

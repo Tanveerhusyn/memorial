@@ -85,7 +85,7 @@ export default function AvatarComponent() {
     
         <MenuItem onClick={handleClose}>
             <Link to="/myaccount" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-          <Avatar /> My account
+          <Avatar src={meta?.displayPicture} /> My account
 
             </Link>
         </MenuItem>

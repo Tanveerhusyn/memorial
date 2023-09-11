@@ -25,20 +25,21 @@ const FilterCard = () => {
   ];
 
   const [selectedTags, setSelectedTags] = useState([]);
-const {newThemes:themes,  setNewThemes,themes:allthemes } = useUserContext()
-  const handleTagChange = (tag) => {
-    const lowerCaseTag = tag.toLowerCase();
+const {newThemes:themes,  setNewThemes,themes:allThemes } = useUserContext()
+const handleTagChange = (tag) => {
+  const lowerCaseTag = tag.toLowerCase();
 
-    if (selectedTags.includes(lowerCaseTag)) {
-      setSelectedTags(selectedTags.filter((t) => t !== lowerCaseTag));
-    } else {
-      setSelectedTags([...selectedTags, lowerCaseTag]);
-    }
-  };
+  if (selectedTags.includes(lowerCaseTag)) {
+    setSelectedTags(selectedTags.filter((t) => t !== lowerCaseTag));
+  } else {
+    setSelectedTags([...selectedTags, lowerCaseTag]);
+  }
+};
 
-  const filteredThemes = selectedTags.length > 0
-    ? themes.filter((theme) => theme.tags && theme.tags.some((tag) => selectedTags.includes(tag.toLowerCase())))
-    : themes;
+const filteredThemes = selectedTags.includes('all')
+  ? allThemes
+  : allThemes.filter((theme) => theme.tags && selectedTags.includes(theme.tags.toLowerCase()));
+
   
   return (
     <div className="filter-bar">
@@ -74,16 +75,18 @@ const {newThemes:themes,  setNewThemes,themes:allthemes } = useUserContext()
         </div>
       
       </div>
-        <button 
-        onClick={()=>{
-          console.log("fil",selectedTags)
-          if(selectedTags.length==0){
-          setNewThemes(allthemes)
-
-          }
-          else {setNewThemes(filteredThemes)}
-        }}
-        className='saveBtn'>Save</button>
+      <button 
+      onClick={() => {
+        console.log("fil", selectedTags)
+        if (selectedTags.includes('all') || selectedTags.length==0) {
+          setNewThemes(allThemes);
+        } else {
+          setNewThemes(filteredThemes);
+        }
+      }}
+      className='saveBtn'>
+      Save
+    </button>
     </div>
   );
 };

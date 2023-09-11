@@ -7,6 +7,7 @@ const themeSchema = new Schema({
   backgroundColor: String,
   textColor: String,
   thumbnail: String,
+  tags: String,
 });
 
 module.exports = mongoose.model('Theme', themeSchema);

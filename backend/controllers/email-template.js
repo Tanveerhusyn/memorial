@@ -1,4 +1,4 @@
-const HTML_TEMPLATE = (text) => {
+const HTML_TEMPLATE = (text,from) => {
     return `
       <!DOCTYPE html>
       <html>
@@ -43,13 +43,14 @@ const HTML_TEMPLATE = (text) => {
           <div class="container">
             <div class="email">
               <div class="email-header">
-                <h1>Remembered and Missed</h1>
+                <h1>WillAlwaysLoveU</h1>
               </div>
               <div class="email-body">
                 <p>${text}</p>
               </div>
               <div class="email-footer">
                 <p>User complaint</p>
+                <p>From ${from} </p>
               </div>
             </div>
           </div>

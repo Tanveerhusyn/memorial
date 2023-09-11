@@ -105,7 +105,7 @@ function CreateMemorial() {
     ]);
   }, []);
 
-  console.log("showOPtions: ", showOption);
+ 
   return (
     <div className="memrialpage">
       <h1>Create a memorial website</h1>

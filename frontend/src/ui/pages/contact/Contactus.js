@@ -23,8 +23,8 @@ function Contactus() {
     setLoading(true)
     // Create an object with the email details
     const emailData = {
-      from:email,
-      to: 'willalwaysloveu@gmail.com', // Change this to your backend endpoint
+      from:'tanveerhussain465@gmail.com',
+      to: 'willalwaysloveutech@gmail.com', // Change this to your backend endpoint
       text: message,
       subject: selectedOption
     };

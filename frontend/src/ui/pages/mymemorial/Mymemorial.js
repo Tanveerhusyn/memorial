@@ -81,6 +81,7 @@ console.log(user)
         </div>
         <h2>MY memorials</h2>
         {memorials.map((memorial) => (
+            <Link to={`/profile/${memorial._id}`}>
             <div className="secondLine">
             <div className="innerCard">
               <div className="left">
@@ -102,6 +103,7 @@ console.log(user)
               </div>
             </div>
           </div>
+            </Link>
         ))}
       
       </div>

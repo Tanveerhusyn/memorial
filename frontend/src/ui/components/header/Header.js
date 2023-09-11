@@ -13,6 +13,8 @@ import MenuItem from '@mui/material/MenuItem';
 import AvatarComponent from "./AvatarComponent";
 
 const Header = ({ loggedIn }) => {
+ 
+  
   const [menuOpen, setMenuOpen] = useState(false);
   const [DmenuOpen, setDMenuOpen] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -57,6 +59,7 @@ const Header = ({ loggedIn }) => {
   };
 
   const {user} = useUserContext();
+   
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };

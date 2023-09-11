@@ -29,7 +29,7 @@ exports.sendEmail = async (req, res) => {
   try {
     // Retrieve the email details from the request body
     const { to, text ,subject,from} = req.body;
-    console.log("INSIDE")
+    console.log("INSIDE",from, to)
 
     // Create a transporter object with your email provider settings
      
@@ -48,9 +48,9 @@ exports.sendEmail = async (req, res) => {
     const options = {
       from: `${from} <${from}>`, // sender address
       to: to, // receiver email
-      subject: subject, // Subject line
+      subject: `${subject} <${from}>`, // Subject line
       text: text,
-      html: HTML_TEMPLATE(text),
+      html: HTML_TEMPLATE(text,from),
   }
     // Send the email
     await transporter.sendMail(options);

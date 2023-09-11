@@ -39,10 +39,7 @@ const Features = () => {
                 </p>
               </div>
             </div>
-          </div>
 
-          
-          <div className="feature-grid-row">
             <div className="feature-card">
               <img src={img3} />
 
@@ -63,9 +60,8 @@ const Features = () => {
                   Set the emotional tone with meaningful background music.
                 </p>
               </div>
+             
             </div>
-          </div>
-          <div className="feature-grid-row">
             <div className="feature-card">
               <img src={img5} />
 
@@ -88,10 +84,13 @@ const Features = () => {
               </div>
             </div>
           </div>
+
+          
+         
+
+          
         </div>
-        <div className="features-grid-right">
-          <img className="ipad_img" src={Ipad} />
-        </div>
+        
       </div>
     </div>
   );
